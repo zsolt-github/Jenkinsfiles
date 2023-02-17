@@ -20,5 +20,13 @@ pipeline {
 				echo "Triggering webhook"
 			}
 		}
+
+		stage("Extra step 2 to trigger webhook") {
+			steps {
+				echo "Triggering webhook 2"
+			}
+		}
+
+
 	}
 }
