@@ -14,5 +14,11 @@ pipeline {
 				sh 'echo BUILD_NUMBER = $BUILD_NUMBER'	// shell variable 											   access
 			}
 		}
+
+		stage("Extra step to trigger webhook") {
+			steps {
+				echo "Triggering webhook"
+			}
+		}
 	}
 }
